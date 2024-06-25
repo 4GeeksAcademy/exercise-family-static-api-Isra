@@ -44,6 +44,7 @@ class FamilyStructure:
         return generated_id
 
     def add_member(self, member):
+        #Este condicional acepta un id si lo trae member y añade uno generado por la API si no lo trae
         if (not(member["id"])):
             member['id'] = self._generate_id()
 
