@@ -44,7 +44,7 @@ def add_member():
     if not member.get("first_name") or not member.get("age") or not member.get("lucky_numbers"):
         return jsonify({"error": "Invalid member data"}), 400
     added_member = jackson_family.add_member(member)
-    return jsonify(added_member), 201
+    return jsonify(added_member), 200
 
 @app.route('/member/<int:id>', methods=['DELETE'])
 def delete_member(id):
